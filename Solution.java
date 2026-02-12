@@ -1,17 +1,22 @@
-// this program is to check if teh given number is prime or not
-//it takes in the user input and runs the for loop to get the answer.
+//aim: this program gives modulos of addition 
 import java.util.Scanner;
-class Solution{
-public Boolean isPrime(int n){
-if (n==1)return false;
-for(int I =2;i*i<=n;i++){
-if (n%1==0) return false;
+class Solution {
+    public static int sumUnderModulo(int a, int b, int M) {
+       int sum=0;
+        
+         sum = a+b;
+         return sum%M;
+         
+    
+        
+    }
+    public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int A =sc.nextInt();
+        int B = sc.nextInt();
+        int M = sc.nextInt();
+        
+        int sol = sumUnderModulo(A,B,M);
+        
+    }
 }
-return true;
-}
-public static void main(String [[]args){
-Scanner sc = new Scanner(System.in);
-int num = sc.nextInt();
-Solution sol = new Solution();
-Boolean result = sol.isPrime(num);
-System.out.println(result);
